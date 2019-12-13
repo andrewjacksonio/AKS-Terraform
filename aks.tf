@@ -18,4 +18,10 @@ resource "azurerm_kubernetes_cluster" "cluster" {
   network_profile {
     network_plugin = "azure"
   }
+
+  addon_profile {
+    kube_dashboard {
+      enabled = true
+    }
+  }
 }
